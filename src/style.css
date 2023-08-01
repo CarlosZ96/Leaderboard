@@ -1,13 +1,13 @@
-body{
+body {
   display: flex;
   flex-direction: row;
 }
 
-.AddScores{
+.AddScores {
   padding-left: 10%;
 }
 
-.ScoresTittle{
+.ScoresTittle {
   display: flex;
   flex-direction: row;
 }
