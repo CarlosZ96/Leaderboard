@@ -21,7 +21,7 @@ const Display = (Scores) => {
 RefreshButton.addEventListener('click', async () => {
   if (GameId) {
     const scores = await Scores(GameId);
-    displayScores(scores);
+    Display(scores);
   }
 });
 
@@ -39,4 +39,4 @@ SubmitButton.addEventListener('submit', async (event) => {
 (async () => {
     const GameName = 'MK';
     GameId = await NewGame(GameName);
-  });
+  })();
