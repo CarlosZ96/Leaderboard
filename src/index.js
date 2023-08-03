@@ -1,26 +1,25 @@
 import './style.css';
-import { NewGame, Scores, AddScore } from './scores.js';
+import { NewGame, Scoresg, AddScore } from './scores.js';
 
 const SubmitButton = document.querySelector('.AddScores');
 const RefreshButton = document.querySelector('.Rbutton');
 
-
 let GameId = null;
 
-const Display = (Scores) => {
+const Display = (scores) => {
   const ScoreList = document.querySelector('.ScoreList');
-  ScoreList.innerHTML = '';
-  Scores.forEach((score) => {
+  ScoreList.innerHTML = ''; 
+  scores.forEach((score) => {
     const ScoreLi = document.createElement('li');
     ScoreLi.classList.add('ScoreI');
-    ScoreList.innerHTML = `${score.user} : ${score.score}`;
+    ScoreLi.textContent = `${score.user} : ${score.score}`;
     ScoreList.appendChild(ScoreLi);
   });
 };
 
 RefreshButton.addEventListener('click', async () => {
   if (GameId) {
-    const scores = await Scores(GameId);
+    const scores = await Scoresg(GameId);
     Display(scores);
   }
 });
@@ -30,13 +29,12 @@ SubmitButton.addEventListener('submit', async (event) => {
   const NameInput = document.getElementById('NameInput');
   const ScoreInput = document.getElementById('ScoreInput');
   if (GameId) {
-    await AddScore(GameId, NameInput, ScoreInput);
+    await AddScore(GameId, NameInput.value, ScoreInput.value);
     SubmitButton.reset();
   }
 });
 
-
 (async () => {
-    const GameName = 'MK';
+    const GameName = 'Morltal Kombat';
     GameId = await NewGame(GameName);
   })();
