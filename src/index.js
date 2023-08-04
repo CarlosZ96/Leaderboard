@@ -8,7 +8,7 @@ let GameId = null;
 
 const Display = (scores) => {
   const ScoreList = document.querySelector('.ScoreList');
-  ScoreList.innerHTML = ''; 
+  ScoreList.innerHTML = '';
   scores.forEach((score) => {
     const ScoreLi = document.createElement('li');
     ScoreLi.classList.add('ScoreI');
@@ -35,6 +35,6 @@ SubmitButton.addEventListener('submit', async (event) => {
 });
 
 (async () => {
-    const GameName = 'Morltal Kombat';
-    GameId = await NewGame(GameName);
-  })();
+  const GameName = 'Morltal Kombat';
+  GameId = await NewGame(GameName);
+})();

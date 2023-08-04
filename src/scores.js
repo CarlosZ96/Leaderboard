@@ -4,7 +4,7 @@ const NewGame = async (name) => {
   const response = await fetch(`${BaseUrl}/games/`, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       name,
