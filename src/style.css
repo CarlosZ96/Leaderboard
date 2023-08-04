@@ -9,20 +9,12 @@ body {
   justify-items: center;
 }
 
-.Scores{
+.Scores {
   width:80%;
   height: 80%;
 }
 
-.Leaderboard{
-  font: bold;
-}
-
-.Recent{
-  font: bold;
-}
-
-.Rbutton{
+.Rbutton {
   color: aquamarine;
   height: max-content;
   width: max-content;
@@ -38,13 +30,12 @@ body {
   width: 100%;
 }
 
-.Recent{
+.Recent {
   padding-right: 10px;
 }
 
-.ScoreList{
+.ScoreList {
   list-style: none;
-  padding: 0;
   border: 2px solid #89e9f8;
   color: cyan;
   padding: 10%;
@@ -55,6 +46,6 @@ body {
   height: 40%;
 }
 
-.ScoreInput{
+.ScoreInput {
   background-color: rgba(105, 105, 105, 0.335);
 }
